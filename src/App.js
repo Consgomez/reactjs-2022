@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { BrowserRouter, Routes, Route, Switch, Link} from "react-router-dom";
+import { BrowserRouter, Router, Route, Switch, Link} from "react-router-dom";
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
@@ -145,7 +145,7 @@ export default function PersistentDrawerLeft() {
         </Drawer>
       <Main open={open}>
         <DrawerHeader />
-          <Routes>
+          <Router>
             <Route exact path="/drafts" component={Drafts}/>
 
             <Route exact path="/" component={Inbox} />
@@ -153,7 +153,7 @@ export default function PersistentDrawerLeft() {
             <Route exact path="/sendemail" component={SendEmail} />
 
             <Route exact path="/starred" component={Starred} />
-          </Routes>
+          </Router>
       </Main>
       </Box>
     </BrowserRouter>
